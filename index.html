@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiger calendar redirect</title>
+</head>
+<body>
+<script>
+    const REDIRECT_LOCATION_MAPPER = {
+        'tigerCalendar': 'https://www.ukr.net/'
+    };
+    const params = new URLSearchParams(window.location.search);
+    const redirectLocation = params.get('redirectQuery');
+    if (redirectLocation === 'tigerCalendar') {
+        window.location.href = REDIRECT_LOCATION_MAPPER.tigerCalendar
+    }
+</script>
+</body>
+</html>
