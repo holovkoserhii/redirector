@@ -7,12 +7,14 @@
 <body>
 <script>
     const REDIRECT_LOCATION_MAPPER = {
-        'tigerCalendar': 'https://www.ukr.net/'
+        tigerCalendar: 'https://www.ukr.net/',
+        tigerCalendarTitle: 'https://www.pravda.com.ua/'
     };
     const params = new URLSearchParams(window.location.search);
     const redirectLocation = params.get('redirectQuery');
-    if (redirectLocation === 'tigerCalendar') {
-        window.location.href = REDIRECT_LOCATION_MAPPER.tigerCalendar
+    const redirectTarget = REDIRECT_LOCATION_MAPPER[redirectLocation];
+    if (redirectTarget) {
+        window.location.href = redirectTarget
     }
 </script>
 </body>
