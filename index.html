@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tiger calendar redirect</title>
-</head>
-<body>
-<script>
-    const REDIRECT_LOCATION_MAPPER = {
-        tigerCalendar: 'https://www.ukr.net/',
-        tigerCalendarTitle: 'https://www.pravda.com.ua/'
-    };
-    const params = new URLSearchParams(window.location.search);
-    const redirectLocation = params.get('redirectQuery');
-    const redirectTarget = REDIRECT_LOCATION_MAPPER[redirectLocation];
-    if (redirectTarget) {
-        window.location.href = redirectTarget
-    }
-</script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>My redirector</title>
+    </head>
+    <body>
+        <script>
+            const REDIRECT_LOCATION_MAPPER = {
+                tigerCalendar: 'https://www.ukr.net/',
+                tigerCalendarTitle: 'https://www.pravda.com.ua/'
+            };
+            const params = new URLSearchParams(window.location.search);
+            const redirectLocation = params.get('redirectQuery');
+            const redirectTarget = REDIRECT_LOCATION_MAPPER[redirectLocation];
+            if (redirectTarget) {
+                window.location.href = redirectTarget
+            }
+        </script>
+    </body>
 </html>
