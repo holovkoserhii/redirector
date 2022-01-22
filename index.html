@@ -14,6 +14,7 @@
             const redirectLocation = params.get('redirectQuery');
             const redirectTarget = REDIRECT_LOCATION_MAPPER[redirectLocation];
             if (redirectTarget) {
+                console.log(redirectTarget);
                 window.location.href = redirectTarget
             }
         </script>
